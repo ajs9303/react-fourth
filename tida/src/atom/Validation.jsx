@@ -1,12 +1,14 @@
 import { Check } from "lucide-react";
-import Text from "./Text";
+
 const Validation = ({ isValid = false, contents }) => {
-  const result = isValid ? "text-green-200" : "text-slate-200";
+  const colorClass = isValid ? "text-green-500" : "text-gray-300";
 
   return (
-    <div className="flex items-center gap-0.5">
-      <Check className={result} />
-      <Text contents={contents} />
+    <div className="flex items-center gap-1 text-sm">
+      <Check className={colorClass} />
+      <span className={isValid ? "text-green-500" : "text-gray-400"}>
+        {contents}
+      </span>
     </div>
   );
 };

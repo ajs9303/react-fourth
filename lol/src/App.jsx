@@ -1,9 +1,9 @@
-import Register from "./pages/Register";
+import Champion from "./molecules/Chapion";
 
 function App() {
   return (
     <>
-      <Register />
+      <Champion />
     </>
   );
 }
