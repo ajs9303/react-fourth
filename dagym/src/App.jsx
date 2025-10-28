@@ -1,16 +1,13 @@
-import Image from "./atom/Image";
 import { data } from "./dagym";
-
-import TextBox from "./molecules/TextBox";
+import Card from "./molecules/Card";
 
 function App() {
   const stores = Object.values(data.result.centerList);
 
   return (
-    <div className="flex flex-row w-full gap-3 items-center">
-      <Image {...stores[0]} />
-      <TextBox {...stores[0]} />
-    </div>
+    <>
+      <Card {...stores[0]} />
+    </>
   );
 }
 
